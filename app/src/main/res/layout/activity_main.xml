@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:components="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.jtike.testmediaplayerapp.MainActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="16dp"
+        android:text="Accurate Time Generator"
+        android:textSize="24sp"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:gravity="center"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp">
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Press to get Time"
+        android:layout_centerInParent="true"
+        android:onClick="StartSong"/>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+     <Button
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="Pause the Time"
+         android:layout_centerInParent="true"
+         android:visibility="invisible"
+         android:onClick="pauseSong"
+         android:id="@+id/pause_button"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <com.example.jtike.testmediaplayerapp.GIFView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        components:src="@raw/pbjtime"
+        android:layout_centerInParent="true"
+        android:visibility="invisible"
+        android:id="@+id/pbjtGif"/>
+
+    </RelativeLayout>
+
+</LinearLayout>
