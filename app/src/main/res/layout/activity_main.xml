@@ -26,7 +26,7 @@
         android:layout_height="wrap_content"
         android:text="Press to get Time"
         android:layout_centerInParent="true"
-        android:onClick="StartSong"/>
+        android:id="@+id/startButton"/>
 
 
     </RelativeLayout>
@@ -41,7 +41,6 @@
          android:text="Pause the Time"
          android:layout_centerInParent="true"
          android:visibility="invisible"
-         android:onClick="pauseSong"
          android:id="@+id/pause_button"/>
     </RelativeLayout>
 
