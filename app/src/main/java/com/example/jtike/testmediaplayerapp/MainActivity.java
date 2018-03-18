@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -37,6 +38,16 @@ public class MainActivity extends AppCompatActivity {
 
         mediaPlayer = MediaPlayer.create(this,R.raw.pbjtsong);
         isPaused = false;
+
+        mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mediaPlayer) {
+                View gifView = findViewById(R.id.pbjtGif);
+                Toast toast = Toast.makeText(getApplicationContext(),"Song Complete",Toast.LENGTH_SHORT);
+                toast.show();
+                gifView.setVisibility(View.INVISIBLE);
+            }
+        });
     }
 
 
